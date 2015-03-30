@@ -1,0 +1,23 @@
+{
+  "name": "Highlight some phrases",
+  "description": "Hightlight some pre defined text from websql database after page loads",
+  "version": "0.1",
+  "permissions": [
+    "tabs", "<all_urls>"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["jquery-1.11.2.min.js", "oauth.js", "sha1.js", "script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "manifest_version":2
+}
